@@ -17,8 +17,8 @@ function App() {
       if (loadedCount === totalFrames + 1) setLoaded(true);
     };
     
-    const onImageError = (e: Event) => {
-      console.error('Failed to load image', e.target);
+    const onImageError = () => {
+      console.error('Failed to load image');
       // Still increment to prevent infinite loading
       loadedCount++;
       if (loadedCount === totalFrames + 1) setLoaded(true);
